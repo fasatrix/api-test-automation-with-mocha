@@ -1,0 +1,11 @@
+{
+  "test": {
+    "url": "https://api.postcodes.io"
+  },
+  "preProd": {
+    "url": "https://api.postcodes.io"
+  },
+  "prod": {
+     "url": "https://api.postcodes.io"
+   }
+}
