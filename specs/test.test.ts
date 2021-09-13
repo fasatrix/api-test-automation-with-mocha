@@ -21,7 +21,6 @@ describe('GET', () => {
     });
 
     it('should return a 200 OK', () => {
-      // console.log(response.body)
       expect(response.status).eq(200);
       if (response.status !== 200) {
         throw new Error(
@@ -47,11 +46,19 @@ describe('GET', () => {
       });
 
       it('should return a 200 OK', () => {
-        // console.log(response.body)
         expect(response.status).eq(200);
       });
       it('response should match the schema', () => {
         expect(response.body).to.be.jsonSchema(RandomPostCodes);
+      });
+      it('response should have headers', () => {
+        expect(response).to.have.header;
+      });
+      it('response should have a "content-type" header ', () => {
+        expect(response).to.have.header('content-type');
+      });
+      it('response should have allow all origins', () => {
+        expect(response.header['access-control-allow-origin']).to.eql('*');
       });
     });
   }
